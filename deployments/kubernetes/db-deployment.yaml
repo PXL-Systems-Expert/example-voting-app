@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db
@@ -11,8 +11,8 @@ spec:
         app: db
     spec:
       containers:
-      - image: postgres:9.4
-        name: db
+      - name: db
+        image: postgres:9.4
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: db-data
