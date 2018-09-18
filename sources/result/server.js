@@ -14,7 +14,7 @@ io.set('transports', ['polling']);
 var port = process.env.PORT || 8080;
 var dbUsername = process.env.DB_USERNAME || "voting";
 var dbPassword = process.env.DB_PASSWORD || "voting";
-var dbName = process.env.DBNAME || "voting";
+var dbName = process.env.DB_NAME || "voting";
 var dbServiceName = process.env.DB_SERVICE_NAME || "db";
 
 io.sockets.on('connection', function (socket) {
