@@ -210,4 +210,5 @@ jdn3n5nf2nd9        vote                "docker-entrypoint..."   2 minutes ago  
 At this point, each component should be deployed locally and everything should be up and running.
 
 The vote web interface should be accessible at this point : [http://127.0.0.1:8080](http://127.0.0.1:8080)
+
 The result web interface should be accessible at this point : [http://127.0.0.1:8081](http://127.0.0.1:8081)
