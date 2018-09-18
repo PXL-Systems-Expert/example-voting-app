@@ -20,6 +20,8 @@ The architecture can be schematized like this :
 
 Be aware that the voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
 
+The images build in this project are publicaly accessible on [Docker Hub](https://hub.docker.com/u/wikitops/).
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local host for development and testing purposes.
@@ -212,3 +214,11 @@ At this point, each component should be deployed locally and everything should b
 The vote web interface should be accessible at this point : [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 The result web interface should be accessible at this point : [http://127.0.0.1:8081](http://127.0.0.1:8081)
+
+## Author
+
+Member of Wikitops : https://www.wikitops.io/
+
+## Licence
+
+This project is licensed under the Apache License, Version 2.0. For the full text of the license, see the LICENSE file.
