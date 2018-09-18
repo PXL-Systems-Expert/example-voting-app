@@ -26,7 +26,7 @@ The images build in this project are publicaly accessible on [Docker Hub](https:
 
 These instructions will get you a copy of the project up and running on your local host for development and testing purposes.
 
-To deploy this project on Openshift or Kubernetes, please refer to [this Github project](https://github.com/wikitops/ansible_voting) or [this one](https://github.com/wikitops/example-voting-app-deployment).
+To deploy this project on Openshift or Kubernetes, please refer to [this Github project](https://github.com/wikitops/ansible_voting) or [this one](https://github.com/wikitops/kubernetes_voting).
 
 ### Prerequisites
 
