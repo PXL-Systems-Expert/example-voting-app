@@ -8,14 +8,11 @@ import org.json.JSONObject;
 class Worker {
   public static void main(String[] args) {
     try {
-      String redis_service_name = System.getenv("REDIS_SERVICE_NAME");
-      String redis_password = System.getenv("REDIS_PASSWORD");
-      String db_service_name = System.getenv("DB_SERVICE_NAME");
-      String db_name = System.getenv("DB_NAME");
-      String db_username = System.getenv("DB_USERNAME");
-      String db_password = System.getenv("DB_PASSWORD");
-      Jedis redis = connectToRedis(redis_service_name, redis_password);
-      Connection dbConn = connectToDB(db_service_name, db_name, db_username, db_password);
+      String db_name = System.getenv("POSTGRES_DB");
+      String db_username = System.getenv("POSTGRES_USER");
+      String db_password = System.getenv("POSTGRES_PASSWORD");
+      Jedis redis = connectToRedis("redis");
+      Connection dbConn = connectToDB("db", db_name, db_username, db_password);
 
       System.err.println("Watching vote queue");
 
@@ -51,9 +48,8 @@ class Worker {
     }
   }
 
-  static Jedis connectToRedis(String host, String password) {
+  static Jedis connectToRedis(String host) {
     Jedis conn = new Jedis(host);
-    conn.auth(password);
 
     while (true) {
       try {

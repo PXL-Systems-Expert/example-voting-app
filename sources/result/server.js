@@ -12,10 +12,9 @@ var express = require('express'),
 io.set('transports', ['polling']);
 
 var port = process.env.PORT || 8080;
-var dbUsername = process.env.DB_USERNAME || "voting";
-var dbPassword = process.env.DB_PASSWORD || "voting";
-var dbName = process.env.DB_NAME || "voting";
-var dbServiceName = process.env.DB_SERVICE_NAME || "db";
+var dbUsername = process.env.POSTGRES_USER || "voting";
+var dbPassword = process.env.POSTGRES_PASSWORD || "voting";
+var dbName = process.env.POSTGRES_DB || "voting";
 
 io.sockets.on('connection', function (socket) {
 
@@ -29,7 +28,7 @@ io.sockets.on('connection', function (socket) {
 async.retry(
   {times: 1000, interval: 1000},
   function(callback) {
-    pg.connect('postgres://' + dbUsername + ':' + dbPassword + '@' + dbServiceName + '/' + dbName, function(err, client, done) {
+    pg.connect('postgres://' + dbUsername + ':' + dbPassword + '@db/' + dbName, function(err, client, done) {
       if (err) {
         console.error("Waiting for db");
       }
