@@ -20,8 +20,6 @@ The architecture can be schematized like this :
 
 Be aware that the voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
 
-The images build in this project are publicaly accessible on [Docker Hub](https://hub.docker.com/u/wikitops/).
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local host for development and testing purposes.
