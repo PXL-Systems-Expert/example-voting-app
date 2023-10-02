@@ -24,7 +24,7 @@ Be aware that the voting application only accepts one vote per client. It does n
 
 These instructions will get you a copy of the project up and running on your local host for development and testing purposes.
 
-To deploy this project on Openshift or Kubernetes, please refer to [this Github project](https://github.com/wikitops/ansible_voting) or [this one](https://github.com/wikitops/kubernetes_voting).
+To deploy this project on Openshift or Kubernetes, please refer to https://github.com/PXL-Systems-Expert/kubernetes_voting.git 
 
 ### Prerequisites
 
